@@ -44,5 +44,9 @@ london_co = {
         "ip": "10.255.0.101",
         "vlans": "10,20,30",
         "routing": True,
-    },
+    }
 }
+
+device=input("Введите имя устройства(r1,r2,sw1):")
+print(london_co[device])
+
