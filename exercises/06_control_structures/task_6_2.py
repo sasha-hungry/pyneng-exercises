@@ -19,11 +19,6 @@ a=int(ip_address[0])
 b=int(ip_address[1])
 c=int(ip_address[2])
 d=int(ip_address[3])
-print(a)
-print(b)
-print(c)
-print(d)
-
 
 if a >= 1 and a <= 223 :
     print('unicast')
