@@ -12,3 +12,26 @@
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 """
+
+ip_address = input ('Введите ip адрес в формате address:')
+ip_address = ip_address.split('.')
+a=int(ip_address[0])
+b=int(ip_address[1])
+c=int(ip_address[2])
+d=int(ip_address[3])
+print(a)
+print(b)
+print(c)
+print(d)
+
+
+if a >= 1 and a <= 223 :
+    print('unicast')
+elif a >= 224 and a <=239 :
+    print('multicast')
+elif a == 255 and b == 255 and c == 255 and d == 255 :
+    print ('local broadcast')
+elif a==0 and b == 0 and c == 0 and d == 0 :
+    print ('unassigned')
+else:
+    print('unused')
