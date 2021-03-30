@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Задание 7.2a
@@ -17,3 +18,14 @@
 """
 
 ignore = ["duplex", "alias", "configuration"]
+
+from sys import argv
+
+filename = argv[1]
+
+with open(filename) as f:
+    for line in f:
+        command = line.split()
+        ingnore_include = set(command)&set(ignore)
+        if not line.startswith('!') and not ingnore_include:
+            print(line.rstrip())
