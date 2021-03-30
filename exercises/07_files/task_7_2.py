@@ -46,7 +46,7 @@ from sys import argv
 
 filename = argv[1]
 
-with open('config_sw1.txt') as f:
+with open(filename) as f:
     for line in f:
         if not line.startswith('!') :
             print(line.rstrip())
