@@ -26,6 +26,6 @@ filename = argv[1]
 with open(filename) as f:
     for line in f:
         command = line.split()
-        ingnore_include = set(command)&set(ignore)
-        if not line.startswith('!') and not ingnore_include:
+        ingnore_include = set(command)&set(ignore) # списоки конвертируются во множеста и находится их пересечение
+        if not line.startswith('!') and not ingnore_include:  # если строка не начиниается с ! и пересечние списка ignored со словами из строки то print (наличе какого либо значения для python есть true)
             print(line.rstrip())
