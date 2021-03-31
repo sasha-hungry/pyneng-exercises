@@ -23,3 +23,16 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+
+result=[]
+
+with open('CAM_table.txt') as f:
+    for line in f:
+        line_list=line.split()
+        if line_list and line_list[0].isdigit() :
+            result.append([int(line_list[0]),line_list[1],line_list[3]]) #добавляем прямо список, номер vlan записываем как число
+
+result2 =sorted(result) # сортировка списка
+
+for vlan,mac,interface in result2:
+    print('{:<9} {:20} {}'.format(vlan,mac,interface))
