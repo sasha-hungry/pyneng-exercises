@@ -20,3 +20,10 @@
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 
 """
+
+with open('CAM_table.txt') as f:
+    for line in f:
+        line_list=line.split()
+        if line_list and line_list[0].isdigit() :
+            print('{:9} {:20} {}'.format(line_list[0],line_list[1],line_list[3]))
+             
